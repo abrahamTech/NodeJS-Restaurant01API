@@ -1,11 +1,9 @@
 import express from "express";
+import morgan from "morgan";
 
 const app = express();
 
-//Settings
-app.set("port", 3000)
+//Middlewares
+app.use(morgan("dev"));
 
-
-app.listen(app.get("port"), () => {
-    console.log(`Server listen on port ${app.get("port")}`);
-})
+export default app;
