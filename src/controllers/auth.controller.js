@@ -73,3 +73,7 @@ export const logout = async (req, res) => {
 
     return res.sendStatus(200);
 };
+
+export const profile = async (req, res) => {
+    res.send("Profile");
+};
