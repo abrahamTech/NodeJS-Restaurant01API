@@ -75,5 +75,6 @@ export const logout = async (req, res) => {
 };
 
 export const profile = async (req, res) => {
+    console.log(req.user);
     res.send("Profile");
 };
