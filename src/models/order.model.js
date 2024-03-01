@@ -29,6 +29,11 @@ const orderSchema = new mongoose.Schema(
             type: String,
             enum: Object.values(OrderStatus),
             default: OrderStatus.Pending,
+        },
+        user: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User",
+            required: true
         }
     },
     {

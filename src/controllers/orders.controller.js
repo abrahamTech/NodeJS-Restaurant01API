@@ -13,7 +13,8 @@ export const createOrder = async (req, res) => {
         price,
         clientRequests,
         orderDate,
-        orderStatus
+        orderStatus,
+        user: req.user.id
     });
 
     const savedOrder = await newOrder.save();
