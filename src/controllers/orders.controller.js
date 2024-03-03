@@ -45,5 +45,5 @@ export const deleteOrder = async (req, res) => {
 
     if(!order) return res.status(404).json({message: "Orden not found"});
 
-    res.json(order);
+    return res.status(204);
 };
