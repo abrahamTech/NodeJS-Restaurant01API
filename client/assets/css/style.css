@@ -200,9 +200,46 @@ body.nav-active {
     -webkit-background-clip: text;
     -webkit-text-stroke: 0.5px var(--eerie-black-3);
     animation: loadingText linear 2s infinite;
-  }
+}
   
-  @keyframes loadingText {
+@keyframes loadingText {
     0% { background-position: 100%; }
     100% { background-position: 0%; }
-  }
+}
+
+
+/* Top Bar */
+
+.topbar {
+    display: none;
+}
+
+.logo-cont {
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 200px;
+    padding: 0.5rem;
+}
+
+.logo-text {
+    width: 12rem;
+    text-align: center;
+}
+
+.logo-text .title {
+    letter-spacing: 0.4rem;
+    margin-bottom: 0.2em;
+    font-size: x-large;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 800;
+}
+
+.logo-text .desc {
+    letter-spacing: 0.45rem;
+    margin-top: -1em;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400;
+}
