@@ -215,7 +215,6 @@ body.nav-active {
 }
 
 .logo-cont {
-    border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: center;
