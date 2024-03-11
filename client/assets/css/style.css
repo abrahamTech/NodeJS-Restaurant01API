@@ -506,3 +506,19 @@ body.nav-active {
 .navbar-link:is(:hover, :focus-visible, .active) .separator { 
     opacity: 1;
 }
+
+.navbar-title {
+    margin-block-end: 15px;
+}
+
+.navbar-text {
+    margin-block: 10px;
+}
+
+.sidebar-link {
+    transition: var(--transition-2);
+}
+
+.sidebar-link:is(:hover, :focus-visible) {
+    color: var(--gold-crayola);
+}
