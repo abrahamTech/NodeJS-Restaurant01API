@@ -369,7 +369,7 @@ body.nav-active {
 
 /* Header */
 
-.overlay, .header .btn {
+.header .btn {
     display: none;
 }
 
@@ -542,4 +542,24 @@ body.nav-active {
 
 .navbar::-webkit-scrollbar-thumb {
     background-color: var(--white-alpha-10);
+}
+
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--black-alpha-80);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-2);
+    z-index: 1;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
 }
