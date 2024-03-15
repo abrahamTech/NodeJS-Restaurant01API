@@ -80,3 +80,27 @@ const updateSliderPos = function () {
     heroSliderItems[currentSlidePos].classList.add("active");
     lastActiveSliderItem = heroSliderItems[currentSlidePos];
 }
+
+const slideNext = function () {
+    if (currentSlidePos >= heroSliderItems.length - 1) {
+        currentSlidePos = 0;
+    } else {
+        currentSlidePos++;
+    }
+    
+    updateSliderPos();
+}
+
+heroSliderNextBtn.addEventListener("click", slideNext);
+
+const slidePrev = function () {
+    if(currentSlidePos <= 0) {
+        currentSlidePos = heroSliderItems.length - 1;
+    } else {
+        currentSlidePos--;
+    }
+
+    updateSliderPos();
+}
+
+heroSliderPrevBtn.addEventListener("click", slidePrev);
