@@ -68,7 +68,7 @@ MAIN SECTION
 */
 
 const heroSlider = document.querySelector("[data-hero-slider]");
-const heroSliderItems = document.querySelector("[data-hero-slider-item]");
+const heroSliderItems = document.querySelectorAll("[data-hero-slider-item]");
 const heroSliderPrevBtn = document.querySelector("[data-prev-btn]");
 const heroSliderNextBtn = document.querySelector("[data-next-btn]");
 
@@ -104,3 +104,26 @@ const slidePrev = function () {
 }
 
 heroSliderPrevBtn.addEventListener("click", slidePrev);
+
+
+/*
+************
+Auto Slide
+************
+*/
+
+let autoSlideInterval;
+
+const autoSlide = function () {
+  autoSlideInterval = setInterval(function () {
+    slideNext();
+  }, 7000);
+}
+
+addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", function () {
+  clearInterval(autoSlideInterval);
+});
+
+addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseout", autoSlide);
+
+window.addEventListener("load", autoSlide);
