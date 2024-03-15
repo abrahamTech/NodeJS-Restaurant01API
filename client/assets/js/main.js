@@ -58,3 +58,25 @@ window.addEventListener("scroll", function () {
         header.classList.remove("active");
     }
 })
+
+
+
+/*
+************
+MAIN SECTION
+************
+*/
+
+const heroSlider = document.querySelector("[data-hero-slider]");
+const heroSliderItems = document.querySelector("[data-hero-slider-item]");
+const heroSliderPrevBtn = document.querySelector("[data-prev-btn]");
+const heroSliderNextBtn = document.querySelector("[data-next-btn]");
+
+let currentSlidePos = 0;
+let lastActiveSliderItem = heroSliderItems[0];
+
+const updateSliderPos = function () {
+    lastActiveSliderItem.classList.remove("active");
+    heroSliderItems[currentSlidePos].classList.add("active");
+    lastActiveSliderItem = heroSliderItems[currentSlidePos];
+}
