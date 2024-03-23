@@ -535,6 +535,18 @@ REUSED STYLE
     width: 100%;
 }
 
+.move-anim {
+    animation: move 5s linear infinite;
+}
+
+@keyframes move {
+  0%,
+  100% { transform: translateY(0); }
+
+  50% { transform: translateY(30px); }
+}
+
+
 
 /*
 ************
