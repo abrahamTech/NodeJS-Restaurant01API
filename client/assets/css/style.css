@@ -546,6 +546,12 @@ REUSED STYLE
   50% { transform: translateY(30px); }
 }
 
+.has-bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 
 
 /*
@@ -1147,4 +1153,49 @@ MENU
 .menu .shape-3 {
     bottom: 0;
     right: 0;
+}
+
+
+/*
+************
+TESTIMONIALS
+************
+*/
+
+.testi {
+    padding-block-end: 340px;
+    position: static;
+}
+
+.testi .quote {
+    font-size: 7rem;
+    font-family: var(--fontFamily-forum);
+    line-height: 0.7em;
+}
+
+.testi .wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    margin-block: 40px 50px;
+}
+
+.testi .separator {
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--gold-crayola);
+    animation: rotate360 15s linear infinite;
+}
+
+.profile .img {
+    margin-inline: auto;
+    border-radius: var(--radius-circle);
+    margin-block-end: 15px;
+}
+
+.testi .profile-name {
+    color: var(--gold-crayola);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--letterSpacing-3);
 }
